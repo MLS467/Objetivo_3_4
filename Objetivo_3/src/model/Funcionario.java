@@ -1,6 +1,8 @@
 package model;
 
-import javax.xml.crypto.Data;
+
+import java.time.LocalDate;
+
 
 public class Funcionario {
     private long id;
@@ -8,18 +10,26 @@ public class Funcionario {
     private String nome;
     private String sobrenome;
 
-    private Data dataNascimento;
+    private LocalDate dataNascimento;
 
     public Funcionario() {
     }
 
-    public Funcionario(long id, String cpf, String nome, String sobrenome, Data dataNascimento) {
+    public Funcionario(long id, String cpf, String nome, String sobrenome, LocalDate dataNascimento) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.dataNascimento = dataNascimento;
     }
+
+    public int IdadeAtual(){
+
+        return LocalDate.now().getYear() - getDataNascimento().getYear();
+
+    }
+
+
 
     public long getId() {
         return id;
@@ -53,11 +63,11 @@ public class Funcionario {
         this.sobrenome = sobrenome;
     }
 
-    public Data getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Data dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

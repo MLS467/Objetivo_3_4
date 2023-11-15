@@ -14,6 +14,13 @@ public class Usuario {
     public Usuario() {
     }
 
+    public Usuario(long id, String nome, String email, String telefone) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
     public Usuario(long id, String nome, String email, String telefone, List<Corrida> corridas) {
         this.id = id;
         this.nome = nome;
@@ -69,7 +76,6 @@ public class Usuario {
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", corridas=" + corridas +
                 '}';
     }
 }

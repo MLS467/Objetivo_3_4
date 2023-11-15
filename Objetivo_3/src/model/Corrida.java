@@ -1,21 +1,31 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Corrida {
     private long id;
     private  String tipoPagamento;
     private String detalhesPagamento;
-    private Date dataInicio;
+    private LocalDate dataInicio;
     private double preco;
     private int atributo;
     Usuario usuario;
     Motorista motorista;
 
+    public Corrida(long id, String tipoPagamento, String detalhesPagamento, LocalDate dataInicio, double preco, int atributo) {
+        this.id = id;
+        this.tipoPagamento = tipoPagamento;
+        this.detalhesPagamento = detalhesPagamento;
+        this.dataInicio = dataInicio;
+        this.preco = preco;
+        this.atributo = atributo;
+    }
+
     public Corrida() {
     }
 
-    public Corrida(long id, String tipoPagamento, String detalhesPagamento, Date dataInicio, double preco, int atributo, Usuario usuario, Motorista motorista) {
+    public Corrida(long id, String tipoPagamento, String detalhesPagamento, LocalDate dataInicio, double preco, int atributo, Usuario usuario, Motorista motorista) {
         this.id = id;
         this.tipoPagamento = tipoPagamento;
         this.detalhesPagamento = detalhesPagamento;
@@ -58,11 +68,11 @@ public class Corrida {
         this.detalhesPagamento = detalhesPagamento;
     }
 
-    public Date getDataInicio() {
+    public LocalDate getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
 

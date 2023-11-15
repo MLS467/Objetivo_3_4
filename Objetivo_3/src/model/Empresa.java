@@ -1,20 +1,29 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empresa {
     private String cnpj;
     private String razaoSocial;
     private String nomeFantasia;
 
-    Funcionario funcionario;
+   List<Funcionario> funcionarioList = new ArrayList<>();
 
     public Empresa() {
     }
 
-    public Empresa(String cnpj, String razaoSocial, String nomeFantasia, Funcionario funcionario) {
+    public Empresa(String cnpj, String razaoSocial, String nomeFantasia) {
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
-        this.funcionario = funcionario;
+    }
+
+    public Empresa(String cnpj, String razaoSocial, String nomeFantasia, List<Funcionario> funcionarioList) {
+        this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
+        this.nomeFantasia = nomeFantasia;
+        this.funcionarioList = funcionarioList;
     }
 
     public String getCnpj() {
@@ -41,13 +50,15 @@ public class Empresa {
         this.nomeFantasia = nomeFantasia;
     }
 
-    public Funcionario getFuncionario() {
-        return funcionario;
+    public List<Funcionario> getFuncionarioList() {
+        return funcionarioList;
     }
 
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+    public void setFuncionarioList(List<Funcionario> funcionarioList) {
+        this.funcionarioList = funcionarioList;
     }
+
+
 
     @Override
     public String toString() {
@@ -55,7 +66,7 @@ public class Empresa {
                 "cnpj='" + cnpj + '\'' +
                 ", razaoSocial='" + razaoSocial + '\'' +
                 ", nomeFantasia='" + nomeFantasia + '\'' +
-                ", funcionario=" + funcionario +
+                ", funcionarioList=" + funcionarioList +
                 '}';
     }
 }

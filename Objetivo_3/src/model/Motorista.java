@@ -10,10 +10,18 @@ public class Motorista {
     private String telefone;
 
     Veiculo veiculo;
-    List<Corrida> corridas = new ArrayList<>();
+    List<Corrida> corridaList = new ArrayList<>();
 
     public Motorista() {
 
+    }
+
+    public Motorista(long id, String nome, String email, String telefone, Veiculo veiculo) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.veiculo = veiculo;
     }
 
     public Motorista(long id, String nome, String email, String telefone, Veiculo veiculo, List<Corrida> corridas) {
@@ -22,7 +30,7 @@ public class Motorista {
         this.email = email;
         this.telefone = telefone;
         this.veiculo = veiculo;
-        this.corridas = corridas;
+        this.corridaList = corridas;
     }
 
     public long getId() {
@@ -66,11 +74,11 @@ public class Motorista {
     }
 
     public List<Corrida> getCorridas() {
-        return corridas;
+        return corridaList;
     }
 
-    public void setCorridas(List<Corrida> corridas) {
-        this.corridas = corridas;
+    public void setCorridaList(List<Corrida> corridaList) {
+        this.corridaList = corridaList;
     }
 
     @Override
@@ -81,7 +89,6 @@ public class Motorista {
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", veiculo=" + veiculo +
-                ", corridas=" + corridas +
                 '}';
     }
 }

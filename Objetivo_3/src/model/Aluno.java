@@ -13,6 +13,12 @@ public class Aluno {
     public Aluno() {
     }
 
+    public Aluno(long matricula, String nome, String sobrenome) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
     public Aluno(long matricula, String nome, String sobrenome, List<Disciplina> disciplinaList) {
         this.matricula = matricula;
         this.nome = nome;

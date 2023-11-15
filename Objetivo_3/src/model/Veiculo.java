@@ -6,14 +6,21 @@ public class Veiculo {
     private long id;
     private  String tipo;
     private String placa;
-    private Date anoFabricacao;
+    private Integer anoFabricacao;
 
     Motorista motorista;
+
+    public Veiculo(long id, String tipo, String placa, Integer anoFabricacao) {
+        this.id = id;
+        this.tipo = tipo;
+        this.placa = placa;
+        this.anoFabricacao = anoFabricacao;
+    }
 
     public Veiculo() {
     }
 
-    public Veiculo(long id, String tipo, String placa, Date anoFabricacao, Motorista motorista) {
+    public Veiculo(long id, String tipo, String placa, Integer anoFabricacao, Motorista motorista) {
         this.id = id;
         this.tipo = tipo;
         this.placa = placa;
@@ -45,11 +52,11 @@ public class Veiculo {
         this.placa = placa;
     }
 
-    public Date getAnoFabricacao() {
+    public Integer getAnoFabricacao() {
         return anoFabricacao;
     }
 
-    public void setAnoFabricacao(Date anoFabricacao) {
+    public void setAnoFabricacao(Integer anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
     }
 
@@ -68,7 +75,6 @@ public class Veiculo {
                 ", tipo='" + tipo + '\'' +
                 ", placa='" + placa + '\'' +
                 ", anoFabricacao=" + anoFabricacao +
-                ", motorista=" + motorista +
                 '}';
     }
 }
