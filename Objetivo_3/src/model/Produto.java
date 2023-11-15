@@ -6,6 +6,8 @@ public class Produto {
     private  int quantidade;
     private  double preco;
 
+    private Fornecedor fornecedor;
+
     public boolean materProduto(int codigo){
         return true;
     }
@@ -13,11 +15,27 @@ public class Produto {
     public Produto() {
     }
 
+    public Produto(int codigo, String nome, int quantidade, double preco, Fornecedor fornecedor) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.preco = preco;
+        this.fornecedor = fornecedor;
+    }
+
     public Produto(int codigo, String nome, int quantidade, double preco) {
         this.codigo = codigo;
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
+    }
+
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     public int getCodigo() {

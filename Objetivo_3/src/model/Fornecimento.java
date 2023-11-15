@@ -1,9 +1,10 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Fornecimento {
-    private Date data;
+    private LocalDate data;
     private double valorTotal;
 
     Fornecedor fornecedor;
@@ -12,18 +13,18 @@ public class Fornecimento {
     public Fornecimento() {
     }
 
-    public Fornecimento(Date data, double valorTotal, Fornecedor fornecedor, Produto produto) {
+    public Fornecimento(LocalDate data, double valorTotal, Fornecedor fornecedor, Produto produto) {
         this.data = data;
         this.valorTotal = valorTotal;
         this.fornecedor = fornecedor;
         this.produto = produto;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
