@@ -7,11 +7,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static java.util.Comparator.comparing;
 
 public class Aluno_Disciplina_Controller {
     public static void main(String[] args) {
-        // Criando instâncias de Aluno
+
         Aluno a1 = new Aluno(123456, "Ichigo", "Kurosaki");
         Aluno a2 = new Aluno(789012, "Rukia", "Kuchiki");
 
